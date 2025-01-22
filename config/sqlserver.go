@@ -13,7 +13,7 @@ var (
 	port     = 1433
 	user     = "CloudSAbe248903"
 	password = "Lf@43767166lflf"
-	database = "gopportunities-db"
+	database = "gopportunities_db"
 )
 
 func InitializeSQLServer() (*gorm.DB, error) {
