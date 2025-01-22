@@ -8,13 +8,13 @@ import (
 
 type Opening struct {
 	gorm.Model
-	Role     string
-	Company  string
-	Location string
-	Remote   bool
-	Link     string
+	Role     string `gorm:"type:varchar(255);not null"`
+	Company  string `gorm:"type:varchar(255);not null"`
+	Location string `gorm:"type:varchar(255);not null"`
+	Remote   bool   `gorm:"not null"`
+	Link     string `gorm:"type:varchar(255);not null"`
 	Salary   int64
-	Closed   bool
+	Closed   bool `gorm:"not null;default:false"`
 }
 
 type OpeningResponse struct {
