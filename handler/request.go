@@ -15,6 +15,7 @@ type CreateOpeningRequest struct {
 	Remote   *bool  `json:"remote"`
 	Link     string `json:"link"`
 	Salary   int64  `json:"salary"`
+	Closed   *bool  `json:"closed"`
 }
 
 func (r *CreateOpeningRequest) Validate() error {

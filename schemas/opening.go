@@ -14,6 +14,7 @@ type Opening struct {
 	Remote   bool
 	Link     string
 	Salary   int64
+	Closed   bool
 }
 
 type OpeningResponse struct {
@@ -27,4 +28,5 @@ type OpeningResponse struct {
 	Remote    bool      `json:"remote"`
 	Link      string    `json:"link"`
 	Salary    int64     `json:"salary"`
+	Closed    bool      `json:"closed"`
 }

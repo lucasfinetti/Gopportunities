@@ -37,6 +37,7 @@ func CreateOpeningHandler(ctx *gin.Context) {
 		Remote:   *request.Remote,
 		Link:     request.Link,
 		Salary:   request.Salary,
+		Closed:   *request.Closed,
 	}
 
 	if err := db.Create(&opening).Error; err != nil {
