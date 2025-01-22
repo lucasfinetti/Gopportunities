@@ -37,3 +37,8 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: 'Free Trial(45133dca-8eb8-4242-84a3-9be7cdf2f537)'
+        appName: 'TestGo'
+        containers: 'testgo.azurecr.io/gopportunities:$(tag)'
