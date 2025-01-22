@@ -7,11 +7,11 @@ RUN go mod download
 COPY . .
 RUN CGO_ENABLED=1 GOOS=linux go build -a -installsuffix cgo -o main .
 
-# Create the final image, running the API and exposing port 8080
+# Create the final image, running the API and exposing port 80
 FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /app/main .
-ARG PORT
-ENV PORT=$PORT
-EXPOSE $PORT
+ARG PORT=80
+ENV PORT=${PORT}
+EXPOSE 80
 CMD ["./main"]
