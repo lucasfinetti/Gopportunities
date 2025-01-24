@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/arthur404dev/gopportunities/config"
+	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/config"
 	"gorm.io/gorm"
 )
 

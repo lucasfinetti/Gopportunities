@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/arthur404dev/gopportunities/config"
-	"github.com/arthur404dev/gopportunities/router"
+	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/config"
+	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/router"
 )
 
 var (

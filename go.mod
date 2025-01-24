@@ -1,4 +1,4 @@
-module github.com/arthur404dev/gopportunities
+module dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities
 
 go 1.19
 

@@ -3,7 +3,7 @@ package config
 import (
 	"fmt"
 
-	"github.com/arthur404dev/gopportunities/schemas"
+	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/schemas"
 	"gorm.io/driver/sqlserver"
 	"gorm.io/gorm"
 )

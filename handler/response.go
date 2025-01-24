@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/arthur404dev/gopportunities/schemas"
+	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/schemas"
 	"github.com/gin-gonic/gin"
 )
 
