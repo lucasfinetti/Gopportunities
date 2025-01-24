@@ -29,7 +29,12 @@ func InitializeSQLServer() (*gorm.DB, error) {
 	}
 
 	// Migrate the Schema
-	err = db.AutoMigrate(&schemas.Opening{})
+	models := []interface{}{
+		&schemas.Opening{},
+		&schemas.Candidate{},
+	}
+
+	err = db.AutoMigrate(models...)
 	if err != nil {
 		logger.Errorf("sqlserver automigration error: %v", err)
 		return nil, err
