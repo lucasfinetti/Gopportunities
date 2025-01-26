@@ -17,5 +17,5 @@ test:
 docs:
 	@swag init
 clean:
-	@rm -f $(APP_NAME)
-	@rm -rf ./docs
+	@if exist $(APP_NAME) del /F /Q $(APP_NAME)
+	@if exist docs rmdir /S /Q docs

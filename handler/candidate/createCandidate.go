@@ -16,9 +16,9 @@ import (
 // @Accept json
 // @Produce json
 // @Param request body CreateCandidateRequest true "Request body"
-// @Success 200 {object} CreateCandidateResponse
-// @Failure 400 {object} ErrorResponse
-// @Failure 500 {object} ErrorResponse
+// @Success 200 {object} handler.CreateCandidateResponse
+// @Failure 400 {object} handler.ErrorResponse
+// @Failure 500 {object} handler.ErrorResponse
 // @Router /candidate [post]
 func CreateCandidateHandler(ctx *gin.Context) {
 	request := CreateCandidateRequest{}
