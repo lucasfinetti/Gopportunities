@@ -4,7 +4,6 @@ import (
 	"net/http"
 
 	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/handler"
-	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/response"
 	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/schemas"
 	"github.com/gin-gonic/gin"
 )
@@ -28,7 +27,7 @@ func CreateCandidateHandler(ctx *gin.Context) {
 
 	if err := request.Validate(); err != nil {
 		handler.Logger.Errorf("validation error: %v", err.Error())
-		response.SendError(ctx, http.StatusBadRequest, err.Error())
+		handler.SendError(ctx, http.StatusBadRequest, err.Error())
 		return
 	}
 
@@ -39,9 +38,9 @@ func CreateCandidateHandler(ctx *gin.Context) {
 
 	if err := handler.Db.Create(&candidate).Error; err != nil {
 		handler.Logger.Errorf("error creating candidate: %v", err.Error())
-		response.SendError(ctx, http.StatusInternalServerError, "error creating candidate on database")
+		handler.SendError(ctx, http.StatusInternalServerError, "error creating candidate on database")
 		return
 	}
 
-	response.SendSuccess(ctx, "create-candidate", candidate)
+	handler.SendSuccess(ctx, "create-candidate", candidate)
 }

@@ -1,9 +1,9 @@
 package router
 
 import (
-	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/candidate"
 	docs "dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/docs"
 	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/handler"
+	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/handler/candidate"
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
