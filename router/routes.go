@@ -1,6 +1,7 @@
 package router
 
 import (
+	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/candidate"
 	docs "dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/docs"
 	"dev.azure.com/lucasfinetti/Finetti/_git/Gopportunities/handler"
 	"github.com/gin-gonic/gin"
@@ -21,7 +22,7 @@ func initializeRoutes(router *gin.Engine) {
 		v1.PUT("/opening", handler.UpdateOpeningHandler)
 		v1.GET("/openings", handler.ListOpeningsHandler)
 
-		v1.POST("/candidate", handler.CreateCandidateHandler)
+		v1.POST("/candidate", candidate.CreateCandidateHandler)
 
 	}
 	// Initialize Swagger
