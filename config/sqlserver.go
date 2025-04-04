@@ -9,10 +9,10 @@ import (
 )
 
 var (
-	server   = "gopportunities-server.database.windows.net"
-	port     = 1433
-	user     = "CloudSAbe248903"
-	password = "Lf@43767166lflf"
+	server   = "dpg-cvntfsk9c44c73fg9n10-a.oregon-postgres.render.com"
+	port     = 5432
+	user     = "gopportunities_db_user"
+	password = "8gRZYmsZiEWyHzPMXXsSQYYJy5DOaaIu"
 	database = "gopportunities_db"
 )
 
