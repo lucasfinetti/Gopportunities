@@ -23,7 +23,11 @@ import (
 func CreateCandidateHandler(ctx *gin.Context) {
 	request := CreateCandidateRequest{}
 
-	ctx.BindJSON(&request)
+	if err := ctx.BindJSON(&request); err != nil {
+		handler.Logger.Errorf("error parsing JSON: %v", err.Error())
+		handler.SendError(ctx, http.StatusBadRequest, "invalid JSON format")
+		return
+	}
 
 	if err := request.Validate(); err != nil {
 		handler.Logger.Errorf("validation error: %v", err.Error())
