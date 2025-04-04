@@ -15,7 +15,7 @@ func Init() error {
 	var err error
 
 	// Initialize SQLServer
-	db, err = InitializeSQLServer()
+	db, err = InitializePostgres()
 
 	if err != nil {
 		return fmt.Errorf("error initializing sqlserver: %v", err)
