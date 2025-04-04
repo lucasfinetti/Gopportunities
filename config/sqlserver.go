@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	server   = "dpg-cvntfsk9c44c73fg9n10-a.oregon-postgres.render.com"
+	server   = "dpg-cvntfsk9c44c73fg9n10-a/gopportunities_db"
 	port     = 5432
 	user     = "gopportunities_db_user"
 	password = "8gRZYmsZiEWyHzPMXXsSQYYJy5DOaaIu"
